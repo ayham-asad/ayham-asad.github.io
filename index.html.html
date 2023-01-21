@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <title>Ruwwad Help Desk</title>
+    <style>
+        body {
+            margin: 0%;
+            background-image: url('/RHD/images/body-image.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Titillium Web', sans-serif;
+            color: #ffffff;
+        }
+        /*padding and border included in total width and height*/
+        * {
+            box-sizing: border-box;
+        }
+        /*grid columns*/
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        /*padding for all columns*/
+        [class*="col-"] {
+            padding: 15px;
+            float: left;
+        }
+        #header {
+            background-color: #01addb;
+            height: fit-content;
+        }
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .content {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        /* sign in button */
+        .signin {
+            align-items: center;
+            background-color: #01addb;
+            border: 2px solid #01addb;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            fill: #000;
+            font-family: Inter,sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            height: 48px;
+            justify-content: center;
+            letter-spacing: -.8px;
+            line-height: 24px;
+            min-width: 140px;
+            outline: 0;
+            padding: 0 17px;
+            text-align: center;
+            text-decoration: none;
+            transition: all .3s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .signin:focus {
+            color: #171e29;
+        }
+
+        .signin:hover {
+            background-color: #3385ff;
+            border-color: #3385ff;
+            fill: #01addb;
+        }
+
+        .signin:active {
+            background-color: #3385ff;
+            border-color: #3385ff;
+            fill: #01addb;
+        }
+
+        @media (min-width: 768px) {
+            .signin {
+                min-width: 170px;
+            }
+        }
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+        /*the popup form - hidden by defualt*/
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0px;
+            right: 30%;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+            color: #000;
+            text-align: left;
+        }
+        /* when the index focused do something */
+        .form-container input[type=text]:focus, 
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;;
+        }
+     
+        /* form button styling */
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+        }
+        /* backgorund color to cancel button*/
+        .form-container .cancel {
+            background-color: #ff0000
+        }
+        /* add hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+        .logo {
+            width: 35px;
+            height: 35px;   
+        }
+    </style>
+</head>
+<body>
+    <!-- Header-->
+    <div id="header" class="row">
+        <img class="col-1" src="/RHD/images/logo.png" alt="ruwwad-logo" width="70px" height="90px">
+        <div class="col-11" class="social">
+            <a href="https://web.facebook.com/ruwwadJo">
+                <img class="logo" src="images/sociallogos/facebook.png" alt="facebook-logo">
+            </a>
+            <a href="https://www.instagram.com/ruwwadjo/">
+                <img class="logo" src="images/sociallogos/instagram.png" alt="instagram-logo">
+            </a>
+            <a href="https://twitter.com/RuwwadJo">
+                <img class="logo" src="images/sociallogos/twitter.png" alt="twitter-logo">
+            </a>
+        </d>
+    </div>
+    <!--body-content-->
+    <div class="content" class="col-6">
+        <h1 style="font-size:80px">RUWWAD HELP DESK</h1>
+        <p style="font-size:30px">" ​Efficiency always wins "</p>
+        <button class="signin" onclick="openform()">
+            Sign in
+        </button>
+        <div class="form-popup" id="loginform" class="col-6">
+            <form action="action/page.php" class="form-container">
+                <h1>login</h1>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="enter email" name="email" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="enter password" name="password" required>
+
+                <button type="submit" class="btn">login</button>
+                <button type="button" class="btn cancel" onclick="closeform()">Close</button>
+            </form>
+        </div>
+        <script>
+            function openform() {
+                document.getElementById("loginform").style.display="block";
+            }
+            function closeform() {
+                document.getElementById("loginform").style.display="none";
+            }
+        </script>
+    </div>
+</body>
+</html>
