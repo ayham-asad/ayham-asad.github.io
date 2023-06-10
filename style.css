@@ -1,0 +1,38 @@
+body {
+  background-image: url("back.jpg");
+  margin: 0%;
+  padding: 0%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+.container {
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+.ico {
+  width: 40px !important;
+  padding: 5px;
+}
+.user {
+  width: 150px !important;
+  border-radius: 50%;
+}
+.image {
+  margin: 15px;
+}
+
+.child{
+    color: #FFFFFF !important;
+    width: 350px;
+    border-radius: 10%;
+    text-align: center;
+}
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set a height to the parent container */
+  }
+  
