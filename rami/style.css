@@ -1,23 +1,25 @@
 @media only screen and (max-width: 768px) {
   /* This style will apply to phones */
   body {
-    background-image: url("phone.jpg"); /* Change to desired background color */
+    background-image: url("phone.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
 @media only screen and (min-width: 769px) {
   /* This style will apply to desktops */
   body {
-    background-image: url("back.jpg"); /* Change to desired background color */
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
 body {
   margin: 0%;
   padding: 0%;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-repeat: no-repeat;
-  background-position: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
     display: grid;
