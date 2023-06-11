@@ -1,0 +1,45 @@
+body {
+  background-image: url("back.jpg");
+  margin: 0%;
+  padding: 0%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+.container {
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+.ico {
+  width: 40px !important;
+  padding: 15px;
+}
+.user {
+  width: 200px !important;
+  border-radius: 50%;
+}
+.image {
+  margin: 15px;
+}
+.child{
+    color: #FFFFFF !important;
+    width: 350px;
+    border-radius: 10%;
+    text-align: center;
+    background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 20px;
+}
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set a height to the parent container */
+  }
+  .flame{
+    font-size: x-large;
+  }
